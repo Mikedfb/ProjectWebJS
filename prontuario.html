@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuário do Paciente</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/common.css">
+    <link rel="stylesheet" href="/assets/prontuario.css">
+</head>
+
+<body>
+    <header class="container-header">
+        <div class="logo-home">
+            <img src="/assets/images/Logo.svg" alt="Logo">
+        </div>
+        <nav class="container-nav">
+            <a href="/home.html">HOME</a>
+            <a href="/cadastrar_cliente.html">CADASTRAR CLIENTE</a>
+            <a href="/agendamento_clinico.html">AGENDAMENTO CLINICO</a>
+            <a href="/agendamento_petshop.html">AGENDAMENTO PETSHOP</a>
+            <a href="/agenda.html">AGENDA</a>
+            <a href="/prontuario.html" class="active">PRONTUÁRIO</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Prontuário do Paciente</h1>
+            
+            <section class="historico">
+                <h2>Histórico do Paciente</h2>
+                <div class="historico-card">
+                    <p class="data-prontuario"><strong>Data:</strong> 25/09/2025</p>
+                    <p><strong>Médico Veterinário:</strong> Dra. Ana Oliveira</p>
+                    <p><strong>Descrição:</strong> Consulta de rotina. Paciente apresentando bom estado geral, vacinação em dia e ausência de parasitas. Recomenda-se acompanhamento nutricional.</p>
+                </div>
+                <div class="historico-card">
+                    <p class="data-prontuario"><strong>Data:</strong> 10/08/2025</p>
+                    <p><strong>Médico Veterinário:</strong> Dr. João Santos</p>
+                    <p><strong>Descrição:</strong> Pet trazido para vacina anual. Pet reagiu bem à aplicação. Tutor foi orientado sobre os próximos agendamentos de vacina.</p>
+                </div>
+            </section>
+
+            <form action="#" method="post" class="novo-prontuario">
+                <h2>Adicionar Nova Entrada</h2>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico">Médico Veterinário:</label>
+                        <input type="text" id="medico" name="medico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição do Atendimento:</label>
+                        <textarea id="descricao" name="descricao" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="arquivos">Anexar Arquivos (fotos, RX, exames):</label>
+                        <input type="file" id="arquivos" name="arquivos[]" multiple>
+                    </div>
+                </fieldset>
+                <button type="submit">Salvar Entrada</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
