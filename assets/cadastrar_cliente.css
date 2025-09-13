@@ -1,0 +1,21 @@
+
+.pet-block {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.pet-block h4 {
+    margin-top: 0;
+}
+
+#add-pet-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#add-pet-btn:hover {
+    background-color: #0056b3;
+}

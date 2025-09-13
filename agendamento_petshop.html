@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Petshop</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/agendamento_petshop.css">
+    <link rel="stylesheet" href="/assets/common.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="container-header">
+        <div class="logo-home">
+            <img src="/assets/images/Logo.svg" alt="Logo">
+        </div>
+       <nav class="container-nav">
+    <a href="/home.html" class="active">HOME</a>
+    <a href="/cadastrar_cliente.html">CADASTRAR CLIENTE</a>
+    <a href="/agendamento_clinico.html">AGENDAMENTO CLINICO</a>
+    <a href="/agendamento_petshop.html">AGENDAMENTO PETSHOP</a>
+    <a href="/agenda.html">AGENDA</a>
+</nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Agendamento Petshop</h1>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Informações do Pet e Tutor</legend>
+                    <div class="form-group">
+                        <label for="nome_tutor">Nome Completo do Tutor:</label>
+                        <input type="text" id="nome_tutor" name="nome_tutor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome_pet">Nome do Pet:</label>
+                        <input type="text" id="nome_pet" name="nome_pet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone_tutor">Telefone para Contato:</label>
+                        <input type="tel" id="telefone_tutor" name="telefone_tutor" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes do Agendamento</legend>
+                    <div class="form-group">
+                        <label for="servico">Tipo de Serviço:</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">-- Selecione o serviço --</option>
+                            <option value="banho_tosa">Banho e Tosa Completa</option>
+                            <option value="banho">Apenas Banho</option>
+                            <option value="tosa">Apenas Tosa</option>
+                            <option value="tosa_higienica">Tosa Higiênica</option>
+                            <option value="outro">Outro (especifique)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_agendamento">Data:</label>
+                        <input type="date" id="data_agendamento" name="data_agendamento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_agendamento">Hora:</label>
+                        <input type="time" id="hora_agendamento" name="hora_agendamento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacoes">Observações (tamanho do pet, tipo de tosa, etc.):</label>
+                        <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/common.css">
+    <link rel="stylesheet" href="/assets/cadastrar_cliente.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="container-header">
+        <div class="logo-home">
+            <img src="/assets/images/Logo.svg" alt="Logo">
+        </div>
+        <nav class="container-nav">
+            <a href="/home.html" class="active">HOME</a>
+            <a href="/cadastrar_cliente.html">CADASTRAR CLIENTE</a>
+            <a href="/agendamento_clinico.html">AGENDAMENTO CLINICO</a>
+            <a href="/agendamento_petshop.html">AGENDAMENTO PETSHOP</a>
+            <a href="/agenda.html">AGENDA</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Cadastro de Cliente e Pets</h1>
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Dados do Cliente</legend>
+
+                    <div class="form-group">
+                        <label for="nome_cliente">Nome Completo:</label>
+                        <input type="text" id="nome_cliente" name="nome_cliente" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email_cliente">E-mail:</label>
+                        <input type="email" id="email_cliente" name="email_cliente" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone_cliente">Telefone:</label>
+                        <input type="tel" id="telefone_cliente" name="telefone_cliente" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="pets-section">
+                    <legend>Dados dos Pets</legend>
+
+                    <div class="pet-block">
+                        <h4>Pet 1</h4>
+                        <div class="form-group">
+                            <label for="nome_pet_1">Nome do Pet:</label>
+                            <input type="text" id="nome_pet_1" name="nome_pet[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="especie_pet_1">Espécie:</label>
+                            <input type="text" id="especie_pet_1" name="especie_pet[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="raca_pet_1">Raça:</label>
+                            <input type="text" id="raca_pet_1" name="raca_pet[]">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="button" id="add-pet-btn">Adicionar outro Pet</button>
+                <button type="submit">Cadastrar</button>
+
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

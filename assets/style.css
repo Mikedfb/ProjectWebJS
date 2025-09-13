@@ -1,0 +1,61 @@
+:root {
+    --pink: #FD66C3;
+    --yellow: #FFDE59;
+    --blue: #5BD9D9;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    color: var(--black);
+}
+
+/* Estilos para o Cabeçalho (Header) */
+.container-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--pink);
+    padding: 20px;
+    height: 150px;
+}
+
+.logo-home img {
+    height: 120px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-home img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para a Navegação (Nav) */
+.container-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.container-nav a {
+    color: var(--yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.container-nav a:hover {
+    background-color: var(--blue);
+    color: var(--black);
+    cursor: pointer;
+}
