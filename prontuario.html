@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prontuário do Paciente</title>
+    <title>Prontuários e Consultas</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/common.css">
@@ -27,45 +27,63 @@
     </header>
 
     <main class="main-content">
-        <div class="container">
-            <h1>Prontuário do Paciente</h1>
-            
-            <section class="historico">
-                <h2>Histórico do Paciente</h2>
-                <div class="historico-card">
-                    <p class="data-prontuario"><strong>Data:</strong> 25/09/2025</p>
-                    <p><strong>Médico Veterinário:</strong> Dra. Ana Oliveira</p>
-                    <p><strong>Descrição:</strong> Consulta de rotina. Paciente apresentando bom estado geral, vacinação em dia e ausência de parasitas. Recomenda-se acompanhamento nutricional.</p>
-                </div>
-                <div class="historico-card">
-                    <p class="data-prontuario"><strong>Data:</strong> 10/08/2025</p>
-                    <p><strong>Médico Veterinário:</strong> Dr. João Santos</p>
-                    <p><strong>Descrição:</strong> Pet trazido para vacina anual. Pet reagiu bem à aplicação. Tutor foi orientado sobre os próximos agendamentos de vacina.</p>
+        <div class="container prontuario-container">
+            <h1>Gerenciamento de Prontuários</h1>
+
+            <section class="secao-busca">
+                <h2>Buscar Prontuário</h2>
+                <p>Consulte o histórico de um pet existente.</p>
+                <div class="busca-input-group">
+                    <input type="text" id="busca-nome-pet" placeholder="Digite o nome do pet...">
+                    <button id="btn-busca">Buscar</button>
                 </div>
             </section>
 
-            <form action="#" method="post" class="novo-prontuario">
+            <section class="secao-resultados" id="resultados-prontuario" style="display: none;">
+                <div class="pet-info-card">
+                    <h3>Prontuário de <span id="pet-nome"></span></h3>
+                    <p><strong>Tutor:</strong> <span id="tutor-nome"></span></p>
+                    <p><strong>Espécie:</strong> <span id="pet-especie"></span> | <strong>Raça:</strong> <span id="pet-raca"></span></p>
+                </div>
+                <div class="historico-prontuario">
+                    <h4>Histórico de Consultas</h4>
+                    <div class="historico-lista" id="historico-lista">
+                        </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+
+            <section class="secao-adicionar">
                 <h2>Adicionar Nova Entrada</h2>
-                <fieldset>
-                    <div class="form-group">
-                        <label for="data">Data:</label>
-                        <input type="date" id="data" name="data" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="medico">Médico Veterinário:</label>
-                        <input type="text" id="medico" name="medico" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="descricao">Descrição do Atendimento:</label>
-                        <textarea id="descricao" name="descricao" rows="6" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="arquivos">Anexar Arquivos (fotos, RX, exames):</label>
-                        <input type="file" id="arquivos" name="arquivos[]" multiple>
-                    </div>
-                </fieldset>
-                <button type="submit">Salvar Entrada</button>
-            </form>
+                <p>Crie um novo registro de atendimento para um pet.</p>
+                <form action="#" method="post" class="novo-prontuario">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="nome_pet">Nome do Pet:</label>
+                            <input type="text" id="nome_pet" name="nome_pet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data_prontuario">Data:</label>
+                            <input type="date" id="data_prontuario" name="data_prontuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="medico">Médico Veterinário:</label>
+                            <input type="text" id="medico" name="medico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição do Atendimento:</label>
+                            <textarea id="descricao" name="descricao" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="arquivos">Anexar Arquivos (fotos, RX, exames):</label>
+                            <input type="file" id="arquivos" name="arquivos[]" multiple>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Salvar Entrada</button>
+                </form>
+            </section>
+
         </div>
     </main>
 </body>
